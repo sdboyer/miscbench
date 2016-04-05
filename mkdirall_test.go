@@ -28,6 +28,8 @@ func BenchmarkMkdirAll2(b *testing.B) {
 }
 
 func BenchmarkMkdirAll3(b *testing.B) {
+	// ...for some reason this is taking 3x as long as i had it in vsolver.
+	// w...t...f...
 	td := os.TempDir() + "mkdt"
 	for i := 0; i < b.N; i++ {
 		el := strconv.Itoa(i)
